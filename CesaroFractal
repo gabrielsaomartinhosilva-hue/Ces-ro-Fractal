@@ -2,12 +2,12 @@ import matplotlib.pyplot as plt
 from math import sin, cos, pi
 
 ordem = 1 #order
-angulo = 40 #angle
+angulo = 60 #angle
 perimetro = 70 #perimeter
 
 rad = pi/180
 listapontos = []
-raio = (perimetro)/((3*(4)**ordem)+(2*cos(angulo*rad)+2)**ordem)
+raio = (perimetro)/((3*(4)**ordem)+(2*(cos(angulo*rad)+1))**ordem)
 pontoinicial = [0, 0]
 listapontos.append(pontoinicial)
 grausinicial = [0]
