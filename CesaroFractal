@@ -3,7 +3,7 @@ from math import sin, cos, pi
 
 ordem = 1 #order
 angulo = 60 #angle
-perimetro = 70 #perimeter
+perimetro = 70 #perimeter (mm)
 
 rad = pi/180
 listapontos = []
@@ -23,9 +23,9 @@ for c in range(0,ordem):
     grausinicial.extend(graus)
 
 
-lado2 = [c + 90 for c in graus]
-lado3 = [c + 180 for c in graus]
-#lado4 = [c + 270 for c in graus]
+lado2 = [c+90-360 if (c+90) >= 360 else c+90 for c in graus]
+lado3 = [c+180-360 if (c+180) >= 360 else c+180 for c in graus]
+#lado4 = [c+270-360 if (c+270) >= 360 else c+270 for c in graus]
 graus.extend(lado2)
 graus.extend(lado3)
 #graus.extend(lado4)
